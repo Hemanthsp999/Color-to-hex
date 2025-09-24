@@ -81,7 +81,7 @@ HTML = """
   </head>
   <body class="bg-light">
     <div class="container py-4">
-      <h3>Image → Hex Color converter</h3>
+      <h3>Image/Text → Hex code converter</h3>
       <p class="text-muted">Upload an image (preferred) or type a color name/hex. Result shows HEX and a 20×20 round swatch.</p>
 
       {% with messages = get_flashed_messages() %}
@@ -119,7 +119,7 @@ HTML = """
         <span id="hexcode">{{ hex_result }}</span>
         <button class="btn btn-sm btn-outline-secondary" id="copyBtn">Copy</button>
         &nbsp;
-        <span class="swatch" id="swatch" style="background-color: {{ hex_result }};"></span>
+        <span class="swatch" id="swatch" style="background-color: {{ hex_result }}; width: 30px; height: 30px;"></span>
       </p>
 
       {% if preview_data %}
